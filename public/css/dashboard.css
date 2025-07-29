@@ -1,101 +1,79 @@
-/* Modern Dashboard Styling */
+/* Clean Dashboard Styling */
 :root {
-  --primary-color: #667eea;
-  --primary-dark: #5a67d8;
-  --secondary-color: #764ba2;
-  --success-color: #48bb78;
-  --warning-color: #ed8936;
-  --error-color: #f56565;
-  --text-primary: #2d3748;
-  --text-secondary: #718096;
-  --bg-primary: #f7fafc;
-  --bg-secondary: #ffffff;
-  --border-color: #e2e8f0;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-  --border-radius: 12px;
+  --blue: #4a90e2;
+  --dark-blue: #357abd;
+  --green: #7ed321;
+  --red: #d0021b;
+  --orange: #f5a623;
+  --dark-gray: #4a4a4a;
+  --gray: #9b9b9b;
+  --light-gray: #f5f5f5;
+  --white: #ffffff;
 }
 
 body {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  min-height: 100vh;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f8f9fa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--dark-gray);
 }
 
 header {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  color: var(--text-primary);
-  padding: 24px 32px;
+  background: white;
+  padding: 20px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: var(--shadow-md);
-  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #eee;
 }
 
 header h1 {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
-  font-size: 1.8rem;
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 24px;
 }
 
 #clock {
-  font-family: "Courier New", monospace;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-secondary);
+  font-family: "SF Mono", Monaco, monospace;
+  font-size: 16px;
+  color: var(--gray);
 }
 
 #logoutBtn {
-  background: linear-gradient(135deg, var(--error-color), #e53e3e);
+  background: var(--red);
   border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 10px 20px;
+  border-radius: 6px;
   color: white;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: var(--shadow-sm);
+  transition: background-color 0.2s;
 }
 
 #logoutBtn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  background: #b8001a;
 }
 
 main {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 32px auto;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 
-/* Task Form Styling */
+/* Task form */
 .task-form {
-  background: var(--bg-secondary);
+  background: white;
   padding: 32px;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-lg);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 32px;
-  border: 1px solid var(--border-color);
 }
 
 .task-form h2 {
-  color: var(--text-primary);
+  color: var(--dark-gray);
   margin-bottom: 24px;
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.task-form h2::before {
-  content: "✨";
-  font-size: 1.5em;
+  font-size: 20px;
 }
 
 .form-group {
@@ -104,514 +82,410 @@ main {
 
 .form-group label {
   display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: var(--text-primary);
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: var(--dark-gray);
+  font-size: 14px;
 }
 
 .form-group input {
   width: 100%;
-  padding: 16px;
-  border: 2px solid var(--border-color);
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  background: var(--bg-primary);
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.2s;
 }
 
 .form-group input:focus {
   outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-  background: white;
+  border-color: var(--blue);
 }
 
-/* ⏰ Duration hint styling */
 .duration-hint {
   display: block;
-  margin-top: 6px;
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  font-style: italic;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--gray);
 }
 
 button[type="submit"] {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: var(--blue);
   color: white;
-  padding: 16px 32px;
+  padding: 12px 24px;
   border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 16px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: var(--shadow-md);
+  transition: background-color 0.2s;
 }
 
-button[type="submit"]:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+button[type="submit"]:hover:not(:disabled) {
+  background: var(--dark-blue);
 }
 
 button[type="submit"]:disabled {
   opacity: 0.6;
   cursor: not-allowed;
-  transform: none;
 }
 
-/* Task Notifications */
+/* Task notifications */
 .task-notification {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 16px 20px;
-  border-radius: 8px;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 6px;
   margin: 16px 0;
-  font-weight: 500;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
-}
-
-.task-notification.show {
-  opacity: 1;
-  transform: translateY(0);
+  font-size: 14px;
 }
 
 .task-notification.error {
-  background: rgba(245, 101, 101, 0.1);
-  color: var(--error-color);
-  border: 1px solid rgba(245, 101, 101, 0.2);
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
 }
 
 .task-notification.success {
-  background: rgba(72, 187, 120, 0.1);
-  color: var(--success-color);
-  border: 1px solid rgba(72, 187, 120, 0.2);
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
 }
 
-.notification-icon {
-  font-size: 1.2em;
-}
-
-/* Task List Styling */
+/* Task list */
 .task-list h2 {
-  color: var(--text-primary);
+  color: var(--dark-gray);
   margin-bottom: 24px;
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.task-list h2::before {
-  content: "📋";
-  font-size: 1.5em;
+  font-size: 20px;
 }
 
 #taskList {
-  display: grid;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .task-card {
-  background: var(--bg-secondary);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-color);
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
   overflow: hidden;
-  transition: all 0.3s ease;
-  position: relative;
+  transition: box-shadow 0.2s;
 }
 
 .task-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .task-card.active {
-  border-left: 4px solid var(--primary-color);
+  border-left: 4px solid var(--blue);
 }
 
 .task-card.completed {
-  border-left: 4px solid var(--success-color);
-  opacity: 0.95;
-}
-
-.task-card.task-completing {
-  animation: taskComplete 1s ease-out;
-}
-
-@keyframes taskComplete {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-    background: #f0fff4;
-  }
-  100% {
-    transform: scale(1);
-  }
+  border-left: 4px solid var(--green);
 }
 
 .task-header {
-  padding: 24px 24px 16px;
+  padding: 20px 20px 12px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
 .task-title {
-  color: var(--text-primary);
-  font-weight: 600;
-  font-size: 1.2rem;
+  color: var(--dark-gray);
+  font-weight: 500;
+  font-size: 18px;
   margin: 0;
-  flex: 1;
 }
 
 .task-status {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.9rem;
+  gap: 6px;
+  font-size: 12px;
   font-weight: 500;
-  padding: 6px 12px;
-  border-radius: 20px;
-  white-space: nowrap;
+  padding: 4px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .status-active {
-  background: rgba(237, 137, 54, 0.1);
-  color: var(--warning-color);
+  background: #fff3cd;
+  color: #856404;
 }
 
 .status-completed {
-  background: rgba(72, 187, 120, 0.1);
-  color: var(--success-color);
+  background: #d4edda;
+  color: #155724;
 }
 
 .status-dot {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: currentColor;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
 }
 
 .task-content {
-  padding: 0 24px 24px;
+  padding: 0 20px 20px;
 }
 
 .task-duration {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 16px;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-}
-
-.duration-label {
-  font-weight: 500;
+  gap: 6px;
+  margin-bottom: 12px;
+  color: var(--gray);
+  font-size: 14px;
 }
 
 .duration-value {
-  font-weight: 600;
-  color: var(--primary-color);
+  font-weight: 500;
+  color: var(--blue);
 }
 
-/* Countdown Styling */
+/* Timer styling */
 .countdown-container {
-  margin-top: 16px;
-}
-
-.countdown {
-  text-align: center;
+  margin-top: 12px;
 }
 
 .timer-display {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  padding: 20px;
-  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-  border-radius: 12px;
-  border: 2px solid var(--border-color);
+  text-align: center;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #eee;
 }
 
 .timer-display.urgent {
-  background: linear-gradient(135deg, #fed7d7, #feb2b2);
-  border-color: var(--warning-color);
-  animation: urgentPulse 1s infinite;
+  background: #fff3cd;
+  border-color: var(--orange);
 }
 
 .timer-display.critical {
-  background: linear-gradient(135deg, #fed7d7, #fc8181);
-  border-color: var(--error-color);
-  animation: criticalShake 0.5s infinite;
-}
-
-@keyframes urgentPulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-  }
-}
-
-@keyframes criticalShake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-2px);
-  }
-  75% {
-    transform: translateX(2px);
-  }
+  background: #f8d7da;
+  border-color: var(--red);
 }
 
 .timer-icon {
-  font-size: 1.5em;
+  font-size: 20px;
+  margin-bottom: 4px;
+  display: block;
 }
 
 .timer-text {
-  font-family: "Courier New", monospace;
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--text-primary);
+  font-family: "SF Mono", Monaco, monospace;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--dark-gray);
+  display: block;
 }
 
 .timer-label {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
+  font-size: 12px;
+  color: var(--gray);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
 }
 
 .timer-finished {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  padding: 20px;
-  background: linear-gradient(135deg, #c6f6d5, #9ae6b4);
-  border-radius: 12px;
-  color: var(--success-color);
+  text-align: center;
+  padding: 16px;
+  background: #d4edda;
+  border-radius: 6px;
+  color: var(--green);
 }
 
 .timer-finished .timer-icon {
-  font-size: 2em;
+  font-size: 24px;
 }
 
 .timer-finished .timer-text {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-/* Token Container Styling */
+/* Token container */
 .token-container {
-  margin-top: 20px;
-  padding: 24px;
-  background: linear-gradient(135deg, #e6fffa, #b2f5ea);
-  border-radius: var(--border-radius);
-  border: 2px solid #4fd1c7;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s ease;
-}
-
-.token-container-visible {
-  opacity: 1;
-  transform: translateY(0);
+  margin-top: 16px;
+  padding: 20px;
+  background: #e7f3ff;
+  border-radius: 6px;
+  border: 1px solid #b3d9ff;
 }
 
 .reward-header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .reward-icon {
-  font-size: 2em;
-  display: block;
+  font-size: 24px;
   margin-bottom: 8px;
+  display: block;
 }
 
 .reward-header h4 {
-  color: var(--text-primary);
-  margin: 0 0 8px 0;
-  font-weight: 600;
+  color: var(--dark-gray);
+  margin: 0 0 4px 0;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .reward-header p {
-  color: var(--text-secondary);
+  color: var(--gray);
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 14px;
 }
 
 .token-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .url-input-group {
   position: relative;
-  display: flex;
-  align-items: center;
 }
 
 .input-icon {
   position: absolute;
-  left: 16px;
-  z-index: 1;
-  font-size: 1.1em;
+  left: 12px;
+  top: 12px;
+  font-size: 16px;
+  color: var(--gray);
 }
 
 .url-input-group input {
   width: 100%;
-  padding: 16px 16px 16px 48px;
-  border: 2px solid #4fd1c7;
-  border-radius: 8px;
-  font-size: 1rem;
-  background: white;
+  padding: 12px 12px 12px 36px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
 .url-input-group input:focus {
   outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: var(--blue);
 }
 
 .token-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 16px 24px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  gap: 8px;
+  padding: 12px 20px;
+  background: var(--blue);
   color: white;
   border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: var(--shadow-md);
+  transition: background-color 0.2s;
 }
 
 .token-btn:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  background: var(--dark-blue);
 }
 
 .token-btn:disabled {
-  opacity: 0.7;
+  opacity: 0.6;
   cursor: not-allowed;
-  transform: none;
 }
 
 .token-btn.loading {
-  background: linear-gradient(135deg, #a0aec0, #718096);
+  background: var(--gray);
 }
 
 .token-btn.used {
-  background: linear-gradient(135deg, var(--success-color), #38a169);
+  background: var(--green);
 }
 
 .btn-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
   to {
     transform: rotate(360deg);
   }
 }
 
 .token-status {
-  margin-top: 12px;
+  margin-top: 8px;
 }
 
 .status-message {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 16px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
 }
 
 .status-message.generating {
-  background: rgba(237, 137, 54, 0.1);
-  color: var(--warning-color);
-  border: 1px solid rgba(237, 137, 54, 0.2);
+  background: #fff3cd;
+  color: #856404;
 }
 
 .status-message.success {
-  background: rgba(72, 187, 120, 0.1);
-  color: var(--success-color);
-  border: 1px solid rgba(72, 187, 120, 0.2);
+  background: #d4edda;
+  color: #155724;
 }
 
 .status-message.error {
-  background: rgba(245, 101, 101, 0.1);
-  color: var(--error-color);
-  border: 1px solid rgba(245, 101, 101, 0.2);
+  background: #f8d7da;
+  color: #721c24;
 }
 
-/* Empty State */
+/* Empty state */
 .empty-state {
   text-align: center;
-  padding: 60px 20px;
-  color: var(--text-secondary);
+  padding: 40px 20px;
+  color: var(--gray);
 }
 
 .empty-icon {
-  font-size: 4em;
+  font-size: 48px;
   margin-bottom: 16px;
 }
 
 .empty-state h3 {
-  color: var(--text-primary);
+  color: var(--dark-gray);
   margin-bottom: 8px;
+  font-size: 18px;
 }
 
 /* Notifications */
 .notification {
   position: fixed;
-  top: 24px;
-  right: 24px;
-  max-width: 400px;
-  padding: 16px 20px;
-  border-radius: 8px;
-  box-shadow: var(--shadow-lg);
-  z-index: 10000;
+  top: 20px;
+  right: 20px;
+  max-width: 350px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
   transform: translateX(100%);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 8px;
+  font-size: 14px;
 }
 
 .notification.show {
@@ -619,52 +493,37 @@ button[type="submit"]:disabled {
 }
 
 .notification.success {
-  background: linear-gradient(135deg, var(--success-color), #38a169);
-  color: white;
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
 }
 
 .notification.error {
-  background: linear-gradient(135deg, var(--error-color), #e53e3e);
-  color: white;
-}
-
-.notification.warning {
-  background: linear-gradient(135deg, var(--warning-color), #dd6b20);
-  color: white;
-}
-
-.notification.info {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
 }
 
 .notification-close {
   background: none;
   border: none;
   color: currentColor;
-  font-size: 1.2rem;
+  font-size: 16px;
   cursor: pointer;
   padding: 0;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  transition: background 0.2s ease;
 }
 
-.notification-close:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* Responsive Design */
+/* Mobile */
 @media (max-width: 768px) {
   header {
     padding: 16px 20px;
     flex-direction: column;
-    gap: 16px;
-    text-align: center;
+    gap: 12px;
   }
 
   main {
@@ -679,12 +538,12 @@ button[type="submit"]:disabled {
 
   .task-header {
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     align-items: flex-start;
   }
 
   .timer-text {
-    font-size: 1.5rem;
+    font-size: 20px;
   }
 
   .notification {

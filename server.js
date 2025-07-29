@@ -14,7 +14,6 @@ const allowedOrigins = [
   'https://your-backend-service.onrender.com' // ✅ Your backend if needed for testing
 ];
 
-
 const app = express();
 
 app.use(cors({
@@ -27,6 +26,7 @@ app.use(cors({
   },
   credentials: true,
 }));
+
 
 app.use(express.json());
 

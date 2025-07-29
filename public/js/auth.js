@@ -1,6 +1,5 @@
 const API_BASE = "https://focusgate.onrender.com/api"
 
-
 const loginForm = document.getElementById("loginForm")
 const registerForm = document.getElementById("registerForm")
 const toggleFormLink = document.getElementById("toggleFormLink")
