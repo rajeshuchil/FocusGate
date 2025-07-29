@@ -8,15 +8,24 @@ import taskRoutes from './routes/taskRoutes.js';
 import tokenRoutes from './routes/tokenRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 dotenv.config();
-const allowedOrigins = ['https://focusgate.onrender.com'];
+const allowedOrigins = [
+  'https://focusgate.onrender.com', // ✅ Your frontend
+  'https://your-backend-service.onrender.com' // ✅ Your backend if needed for testing
+];
 
 const app = express();
+
 app.use(cors({
-  origin: allowedOrigins,
-  credentials: true, // only if you're using cookies/auth headers
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
 }));
 
-app.use(cors());
 
 app.use(express.json());
 
