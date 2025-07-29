@@ -1,5 +1,5 @@
 // ✅ API Base URL
-const API_BASE = 'https://your-backend-service.onrender.com/api';
+const API_BASE = 'https://focusgate.onrender.com/api';
 
 // ✅ Parse JWT token
 export const parseJWT = (token) => {

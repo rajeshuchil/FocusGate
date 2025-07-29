@@ -1,4 +1,4 @@
-const API_BASE = 'https://your-backend-service.onrender.com/api';
+const API_BASE = 'https://focusgate.onrender.com/api';
 
 const loginForm = document.getElementById('loginForm');
 const registerForm = document.getElementById('registerForm');
