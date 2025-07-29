@@ -1,0 +1,25 @@
+.countdown-container {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.countdown-container h1 {
+  margin-bottom: 20px;
+}
+
+#timer {
+  font-size: 2em;
+  font-weight: bold;
+  color: #1d72b8;
+  margin: 10px 0 20px;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FocusFlow - Token Access</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/countdown.css" />
+</head>
+<body>
+  <header>
+    <h1>Distraction Time (Limited)</h1>
+    <!-- Countdown display with correct ID and class -->
+    <div id="countdown" class="timer-display">10:00</div>
+  </header>
+
+  <main>
+    <!-- IFrame with the correct ID expected by countdown.js -->
+    <iframe id="targetFrame" class="target-frame" src="" frameborder="0"></iframe>
+  </main>
+
+  <script type="module" src="js/countdown.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+header {
+  background-color: #1d72b8;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+#taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task {
+  background-color: white;
+  padding: 15px;
+  border-left: 5px solid #1d72b8;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.task.completed {
+  opacity: 0.7;
+  border-left-color: green;
+}
+
+.task h3 {
+  margin-bottom: 5px;
+}
+
+.countdown {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+.countdown.red {
+  color: red;
+}
