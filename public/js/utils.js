@@ -1,5 +1,5 @@
 // ✅ API Base URL
-export const API_BASE = 'http://localhost:3000/api';
+const API_BASE = 'https://your-backend-service.onrender.com/api';
 
 // ✅ Parse JWT token
 export const parseJWT = (token) => {
