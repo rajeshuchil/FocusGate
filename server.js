@@ -7,17 +7,17 @@ import connectDB from './config/db.js';
 import taskRoutes from './routes/taskRoutes.js';
 import tokenRoutes from './routes/tokenRoutes.js';
 import authRoutes from './routes/authRoutes.js';
+dotenv.config();
 const allowedOrigins = ['https://focusgate.onrender.com'];
 
+const app = express();
 app.use(cors({
   origin: allowedOrigins,
   credentials: true, // only if you're using cookies/auth headers
 }));
-dotenv.config();
-
-const app = express();
 
 app.use(cors());
+
 app.use(express.json());
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
