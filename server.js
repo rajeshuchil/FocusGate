@@ -8,10 +8,12 @@ import taskRoutes from './routes/taskRoutes.js';
 import tokenRoutes from './routes/tokenRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 dotenv.config();
+
 const allowedOrigins = [
   'https://focusgate.onrender.com', // ✅ Your frontend
   'https://your-backend-service.onrender.com' // ✅ Your backend if needed for testing
 ];
+
 
 const app = express();
 
@@ -25,7 +27,6 @@ app.use(cors({
   },
   credentials: true,
 }));
-
 
 app.use(express.json());
 

@@ -3,44 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FocusFlow - Login/Register</title>
+  <title>FocusFlow - Welcome</title>
   <link rel="stylesheet" href="css/main.css"/>
   <link rel="stylesheet" href="css/auth.css"/>
 </head>
 <body>
-  <div class="auth-container">
-    <h2 id="formTitle">Welcome to FocusFlow</h2>
+  <div class="auth-background">
+    <div class="auth-container">
+      <!-- Logo and Brand -->
+      <div class="brand-section">
+        <div class="brand-logo">🎯</div>
+        <h1 class="brand-title">FocusFlow</h1>
+        <p class="brand-subtitle">Transform distractions into rewards</p>
+      </div>
 
-    <!-- Login Form -->
-    <form id="loginForm">
-      <label for="loginEmail">Email</label>
-      <input type="email" id="loginEmail" required />
+      <!-- Auth Forms Container -->
+      <div class="auth-forms">
+        <div class="form-header">
+          <h2 id="formTitle">Welcome Back</h2>
+          <p id="formSubtitle">Sign in to continue your focus journey</p>
+        </div>
 
-      <label for="loginPassword">Password</label>
-      <input type="password" id="loginPassword" required />
+        <!-- Login Form -->
+        <form id="loginForm" class="auth-form">
+          <div class="input-group">
+            <div class="input-icon">📧</div>
+            <input type="email" id="loginEmail" required />
+            <label for="loginEmail">Email Address</label>
+          </div>
 
-      <button type="submit">Login</button>
-    </form>
+          <div class="input-group">
+            <div class="input-icon">🔒</div>
+            <input type="password" id="loginPassword"  required />
+            <label for="loginPassword">Password</label>
+          </div>
 
-    <!-- Register Form -->
-    <form id="registerForm" class="hidden">
-      <label for="registerName">Name</label>
-      <input type="text" id="registerName" required />
+          <button type="submit" class="auth-btn primary">
+            <span class="btn-icon">🚀</span>
+            <span class="btn-text">Sign In</span>
+            <div class="btn-loader"></div>
+          </button>
+        </form>
 
-      <label for="registerEmail">Email</label>
-      <input type="email" id="registerEmail" required />
+        <!-- Register Form -->
+        <form id="registerForm" class="auth-form hidden">
+          <div class="input-group">
+            <div class="input-icon">👤</div>
+            <input type="text" id="registerName" placeholder="Enter your full name" required />
+            <label for="registerName">Full Name</label>
+          </div>
 
-      <label for="registerPassword">Password</label>
-      <input type="password" id="registerPassword" required />
+          <div class="input-group">
+            <div class="input-icon">📧</div>
+            <input type="email" id="registerEmail" placeholder="Enter your email" required />
+            <label for="registerEmail">Email Address</label>
+          </div>
 
-      <button type="submit">Register</button>
-    </form>
+          <div class="input-group">
+            <div class="input-icon">🔒</div>
+            <input type="password" id="registerPassword" placeholder="Create a strong password" required minlength="6" />
+            <label for="registerPassword">Password</label>
+            <div class="password-strength">
+              <div class="strength-bar"></div>
+              <span class="strength-text">Password strength</span>
+            </div>
+          </div>
 
-    <!-- Toggle Login/Register -->
-    <p id="toggleMessage" class="text-center mt-4 text-sm text-gray-600">
-      Don't have an account?
-      <a href="#" id="toggleFormLink" class="text-blue-600 hover:underline">Register</a>
-    </p>
+          <button type="submit" class="auth-btn primary">
+            <span class="btn-icon">✨</span>
+            <span class="btn-text">Create Account</span>
+            <div class="btn-loader"></div>
+          </button>
+        </form>
+
+        <!-- Toggle Section -->
+        <div class="auth-toggle">
+          <p id="toggleMessage">
+            Don't have an account?
+            <a href="#" id="toggleFormLink">Create one</a>
+          </p>
+        </div>
+
+        <!-- Error/Success Messages -->
+        <div id="authMessage" class="auth-message hidden"></div>
+      </div>
+
+      <!-- Features Section -->
+      <div class="features-section">
+        <h3>Why Choose FocusFlow?</h3>
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon">⏰</div>
+            <h4>Time Management</h4>
+            <p>Set focused work sessions with precise timing</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🎁</div>
+            <h4>Reward System</h4>
+            <p>Earn limited access to distracting sites</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">📊</div>
+            <h4>Progress Tracking</h4>
+            <p>Monitor your productivity and focus habits</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+      <div class="floating-circle circle-1"></div>
+      <div class="floating-circle circle-2"></div>
+      <div class="floating-circle circle-3"></div>
+      <div class="floating-circle circle-4"></div>
+    </div>
   </div>
 
   <script src="js/auth.js"></script>
