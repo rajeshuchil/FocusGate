@@ -9,13 +9,13 @@ import tokenRoutes from './routes/tokenRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 dotenv.config();
 
-const allowedOrigins = [
+/*const allowedOrigins = [
   'https://focusgate.onrender.com', // ✅ Your frontend
   'https://your-backend-service.onrender.com' // ✅ Your backend if needed for testing
 ];
-
+*/
 const app = express();
-
+/*
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
@@ -26,7 +26,8 @@ app.use(cors({
   },
   credentials: true,
 }));
-
+*/
+app.use(cors());
 
 app.use(express.json());
 

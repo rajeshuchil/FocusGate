@@ -1,5 +1,5 @@
-const API_BASE = "https://focusgate.onrender.com/api"
-
+//const API_BASE = "https://focusgate.onrender.com/api"
+const API_BASE = "http://localhost:3000/api";
 const loginForm = document.getElementById("loginForm")
 const registerForm = document.getElementById("registerForm")
 const toggleFormLink = document.getElementById("toggleFormLink")

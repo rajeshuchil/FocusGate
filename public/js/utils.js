@@ -1,6 +1,6 @@
 // ✅ API Base URL
-const API_BASE = 'https://focusgate.onrender.com/api';
-
+//const API_BASE = 'https://focusgate.onrender.com/api';
+const API_BASE = 'http://localhost:3000/api';
 // ✅ Parse JWT token
 export const parseJWT = (token) => {
   try {

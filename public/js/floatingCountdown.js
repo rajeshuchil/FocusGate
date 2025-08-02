@@ -20,9 +20,9 @@ export function showFloatingCountdown(targetUrl, durationSeconds = 120, tokenId)
 
   // Create widget
   createFloatingWidget(durationSeconds)
-
+   const fullUrl = `${targetUrl}?token=${tokenId}&duration=${durationSeconds}`;
   // Open the distracting site in a new tab and keep the reference
-  distractingTab = window.open(targetUrl, "_blank")
+  distractingTab = window.open(fullUrl, "_blank")
 
   startCountdown(endTime)
 }
@@ -150,7 +150,7 @@ function startCountdown(endTime) {
   const widget = document.getElementById("floating-countdown-widget")
 
   let lastBeepSecond = null
-  const totalDuration = JSON.parse(localStorage.getItem("activeToken"))?.duration || 600
+  const totalDuration = JSON.parse(localStorage.getItem("activeToken"))?.duration || 120;
 
   function update() {
     const now = Date.now()

@@ -101,10 +101,9 @@ async function handleTokenSubmit(e, taskId) {
     console.log("Token generation response:", data)
 
     if (data.tokenId && url) {
-      // 🔹 SINGLE-USE TOKEN: Mark as used immediately
+      
       tokenStates.set(taskId, { used: true, generating: false })
 
-      // Update UI to show token is used
       button.innerHTML = `
         <span class="btn-icon">✅</span>
         <span class="btn-text">Token Used</span>
@@ -123,7 +122,7 @@ async function handleTokenSubmit(e, taskId) {
       showNotification("🎉 Token activated! Distraction site opened for 10 minutes!", "success")
 
       // Open distraction site with floating countdown
-      showFloatingCountdown(url, 600, data.tokenId) // 10 minutes
+      showFloatingCountdown(url, 120, data.tokenId) // 10 minutes
     } else {
       throw new Error("Token generation failed")
     }

@@ -3,7 +3,7 @@ const url = params.get('url');
 const tokenId = params.get('tokenId');
 
 let popupWindow = null;
-let remainingTime = 600;
+let remainingTime = 120;
 const countdownElement = document.getElementById('countdown');
 const beepAudio = new Audio('audio/beep.mp3');
 let lastBeepSecond = null;
